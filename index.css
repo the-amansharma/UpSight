@@ -539,8 +539,6 @@ li:hover{
 
 
  .form-container {
-  
-  border: 2px solid red;
   font-family: 'Inter';
   
   display: flex;
@@ -921,7 +919,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100dvw;
-  height: 52dvh;
+  max-width: 52dvh;
   margin-top: 60px; 
 }
 
