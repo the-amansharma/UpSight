@@ -38,6 +38,11 @@ body {
   display: none;
 }
 
+.navl{
+  display: inline-block;
+    transition: left 0.3s ease;
+}
+
 .logo a {
   font-size: 72px;
   background: -webkit-linear-gradient(
@@ -77,7 +82,7 @@ body {
 
 .navdiv a {
   color: #ffffff;
-  font-size: 1.7dvw;
+  font-size: 1.5dvw;
   padding-right: 25px;
   padding-left: 25px;
   margin-left: 25px;
@@ -92,7 +97,7 @@ body {
   color: red;
   background: skyblue;
   border: 2px solid transparent;
-  padding: 10px 20px;
+  padding: 10px 0px;
   font-size: 1.1dvw;
   font-weight: bold;
   margin-right: 70px;
@@ -125,6 +130,7 @@ body {
   color: #ffffff;
   transition: color 0.4s;
   font-family: "Inter";
+  padding: 0;
 }
 
 .brochure-button:hover,
@@ -138,15 +144,15 @@ body {
  justify-content: center;
  align-items: center;
   text-align: center;
-  padding: 100px 20px;
+  padding-top: 100px;
   font-size: 2dvh;
   margin-top: 30px;
-  width: 100vw;
+  width: 100dvw;
+  height: 100%;
   background-image: url(/background/stage-light.png);
 }
 .section-1 h1 {
-  font-size: 9dvw;
-  padding-top: 30px;
+  font-size: 8dvw;
   margin-bottom: 35px;
   background-image: linear-gradient(180deg, #ffffffe5 0%, #ffffff8c 100%);
   -webkit-background-clip: text;
@@ -175,6 +181,7 @@ body {
   border: 2px solid transparent;
   padding: 15px 22px;
   font-size: 1.1em;
+  text-wrap: wrap;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -221,11 +228,11 @@ body {
   justify-content: center;
   align-items:flex-start;
   width: 100dvw;
-  height: 100dvh;
+  height: 80vh;
   margin-bottom: 100px;
   transition: all 0.2s ease-in-out;
 }
-.container-1:hover {
+.container-1 img:hover {
   transform: scale(1.05);
 }
 
@@ -234,20 +241,21 @@ body {
   height: auto;
  
 }
-/*bento-grid container-2*/
+/*bento-grid container-2 CSS start*/
 .container-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-top: 100px;
 }
 
 .bento-grid {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 90%;
-  height: 90%;
+  width: 65%;
+  height: 80%;
 }
 
 .top {
@@ -343,6 +351,9 @@ body {
   .sub-item1 {
     font-size: 7dvh;
   }
+  .bento-grid{
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -350,7 +361,7 @@ body {
     height: 35dvh;
   }
   .bento-grid {
-    width: 95%;
+    width: 90%;
   }
   .sub-item1 {
     font-size: 4dvh;
@@ -392,7 +403,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 100px;
+  
 }
 
 /* Header styling */
@@ -486,7 +497,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 100px;
+
 }
 
 .container-5 header {
@@ -767,8 +778,14 @@ footer {
   height: 40px; 
 }
 @media (max-width: 480px) {
+  footer{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  
   .footer-content .logo img {
     width:100px;
+    margin: 0;
   }
   .footer-content {
     flex-direction: column;
@@ -785,8 +802,7 @@ footer {
   }
   .social-media a img {
     width: 35px;
-    height: 35px; 
-    
+    height: 35px;   
   }
 }
 
@@ -800,15 +816,15 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    height: 100vh;
     flex-direction: column;
-    margin-top: 20dvh;
-    margin-bottom: 20dvh;
+
 }
 
 .team-section {
     text-align: center;
-    padding: 10px;
+    
+    height: 90%;
 }
 
 .team-container {
@@ -817,6 +833,7 @@ footer {
     grid-template-rows: repeat(3, auto);
     gap: 30px;
     max-width: 900px;
+    
 }
 
 .team-member img {
@@ -1042,37 +1059,48 @@ footer {
   .navdiv {
     flex-direction: column;
   }
-  .logo img {
-    margin-left: 0;
-    margin-bottom: 20px;
+  img.top-logo {
+    margin: 0;
+    padding: 0 0 0 0;
     flex-direction: flex-start;
     width: 35dvw;
+  }
+  .logo a{
+    margin: 0 0 0 0;
+    padding: 0px 0px 0px;
   }
 
   .logo{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100dvw;
   }
-  .top-logo{
-    align-self: flex-start;
+  img.top-logo{
+    margin: 0;
+    padding: 0;
   }
   .navl{
     position: relative;
      left: -150%;
-     display: none;
-     
+     display: none; 
+     transition: left 0.3s ease, display 0s 0.3s;
   } 
-
+  
   .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 8px;
   }
   .brochure-button {
-    margin-right: 0;
+    margin: 0px;
     margin-top: 20px;
-    padding: 10px 10px;
+    padding: 10px 0px;
+  }
+  .brochure-button a{
+    margin: 0;
+    padding: 0px;
   }
   .brochure-button:hover,
 .brochure-button:hover a {
@@ -1089,37 +1117,51 @@ footer {
   .hamb{
     display: block;
     cursor: pointer;
+    margin-right: 25px;
+    margin-bottom: 10px;
   }
   
 
   .stage{
-    height: 65dvh;
+    height: 60dvh;
   }
   .container-1{
     height: 40dvh;
+  }
+  .download-brochure-button{
+    font-size: 0.8em;
+    font-weight: bold;
+    
+  }
+  .container-1{
+    height: 35dvh;
+  }
+  .team-body{
+    height: 60vh;
   }
   
 }
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
+
   .navdiv {
     flex-direction: column;
   }
   .navl{
     position: relative;
      left: -150%;
-     display: none;
+     display: none; 
      transition: left 0.3s ease, display 0s 0.3s;
-  } 
+  }  
+
   .logo{
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .logo img {
-    margin-left: 0;
-    margin-bottom: 20px;
+  img.top-logo {
+    margin: 0;
     width: 40dvw;
     flex-direction: flex-start;
   }
@@ -1140,6 +1182,34 @@ footer {
     padding-bottom: 7px;
     margin-left: 25px;
     margin-right: 25px;
+  }
+
+  .stage{
+    height: 45dvh;
+  }
+
+  .section-1 h1{
+    margin-bottom: 10px;
+  }
+  .section-1 p{
+    font-size: 9px;
+  }
+  #welcome{
+    font-size: 15px;
+  }
+  .container-1{
+    height: 15dvh;
+  }
+  .service-heading{
+    font-size: 45px;
+  }
+  
+  .container-5 header h1,.container-3 header h1{
+    font-size: 9dvw;
+    margin-top: 0;
+  }
+  .team-body{
+    height: 60vh;
   }
  
 }
