@@ -20,18 +20,24 @@ body {
 }
 .stage {
   background-image: url(/background/image_1.png);
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   background-size: cover;
   background-repeat: no-repeat;
   /* position: relative; */
 }
 
+
+
 .logo img {
-  width: 37px;
+  width: 10dvw;
   margin-right: 2px;
   margin-left: 25px;
 }
+.hamb{
+  display: none;
+}
+
 .logo a {
   font-size: 72px;
   background: -webkit-linear-gradient(
@@ -69,19 +75,15 @@ body {
   justify-content: space-between;
 }
 
-li {
-  list-style: none;
-  display: inline-block;
-}
-li a {
+.navdiv a {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.7dvw;
   padding-right: 25px;
   padding-left: 25px;
   margin-left: 25px;
   margin-right: 25px;
 }
-li:hover{
+.navdiv a:hover{
   text-shadow: #FC0 1px 0 10px;
   transition: all 0.2s ease-in;
   transform: scale(1.1);
@@ -91,7 +93,7 @@ li:hover{
   background: skyblue;
   border: 2px solid transparent;
   padding: 10px 20px;
-  font-size: 0.7em;
+  font-size: 1.1dvw;
   font-weight: bold;
   margin-right: 70px;
   cursor: pointer;
@@ -131,20 +133,20 @@ li:hover{
 }
 
 .section-1 {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
   text-align: center;
   padding: 100px 20px;
-  font-size: 2vh;
+  font-size: 2dvh;
   margin-top: 30px;
   width: 100vw;
-  margin-bottom: 100px;
   background-image: url(/background/stage-light.png);
 }
 .section-1 h1 {
-  font-size: 15vh;
+  font-size: 9dvw;
+  padding-top: 30px;
   margin-bottom: 35px;
   background-image: linear-gradient(180deg, #ffffffe5 0%, #ffffff8c 100%);
   -webkit-background-clip: text;
@@ -215,8 +217,11 @@ li:hover{
 
 .container-1 {
   position: relative;
-  width: 100vw;
-  height: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  width: 100dvw;
+  height: 100dvh;
   margin-bottom: 100px;
   transition: all 0.2s ease-in-out;
 }
@@ -225,98 +230,141 @@ li:hover{
 }
 
 .overlay-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 80px;
   width: 90vw;
   height: auto;
+ 
+}
+/*bento-grid container-2*/
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .bento-grid {
-  margin-left: 30px ;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  background-color: black;
-}
-
-.bento-item {
-  background-color: #000000;
-  padding: 20px;
-  text-align: center;
-  border-radius: 45px;
-}
-
-.bento-item.large {
-  grid-column: span 1;
-  grid-row: span 2;
-  background-color: white;
-  color: black;
-  font-family: "Poppins";
-}
-
-.bento-item.large img {
-  margin-left: -170px;
-  border-radius: 45px;
-  margin-bottom: -25px;
-  width: 240px;
-}
-
-.bento-item.medium {
-  grid-column: span 2;
-  color: rgb(255, 255, 255);
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  font-family: "poppins";
-  background-color: rgb(0, 0, 0);
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  height: 90%;
 }
 
-.bento-item.medium img {
-  border-radius: 40px;
-  width: 35%;
-  margin-right: 30px;
+.top {
+  display: flex;
+  gap: 10px;
+  flex: 1.5 1;
+}
+.bottom {
+  display: flex;
+  gap: 10px;
+  flex: 1 1;
 }
 
-.text3 {
-  margin-bottom: 50px;
+.top > .item,
+.bottom > .item {
+  height: 100%;
+  border-radius: 1.5rem;
+  align-self: baseline;
 }
 
-#why {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 40px;
-  margin-left: -400px;
-  margin-top: -50px;
+.item1 {
+  flex: 2.2;
+  background: url(upsight_media/story-telling.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.item2 {
+  flex: 1 1;
+  height: 80%;
+  background: url(upsight_media/design-full.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.text1 {
-  color: rgb(0, 0, 0);
-  /* font-size: 40px; */
+.item3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1.5;
 }
 
-.bento-item.middle {
-  min-width: 25%;
-  max-width: 30%;
-  background-color: #4b2a14;
-  font-family: "poppins";
-  color: #fff;
-  padding: 20px;
+.sub-item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  color: whitesmoke;
+  font-size: 15dvh;
+  font-weight: bolder;
+  flex: 1.5 1 65%;
+  border-radius: 20px;
 }
 
-.bento-item.middle .highlight {
-  color: #ffc107;
-  font-weight: 800;
+.sub-item2 {
+  flex: 1 1 40%;
+  border-radius: 20px;
+  background: url(upsight_media/uptec-full.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.bottom {
+  flex-direction: row;
+}
+
+.item4 {
+  flex: 1 1;
+  background: url(upsight_media/black-sight.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.item5 {
+  flex: 3 1;
+  background: url(upsight_media/story-uploading.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item:hover, .sub-item2:hover{
+  transform: scale(1.02);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container-2 {
+    height: 50dvh;
+  }
+  .sub-item1 {
+    font-size: 7dvh;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-2 {
+    height: 35dvh;
+  }
+  .bento-grid {
+    width: 95%;
+  }
+  .sub-item1 {
+    font-size: 4dvh;
+  }
+}
+
+
+/*bento-grid container-2 END*/
+
 
 .service-heading{
   color: #ffffff;
   font-family: "Poppins";
-  font-size: 12vh;
+  font-size: 9dvw;
   font-weight: 600;
   text-align: center;
   margin-top: 50px;
@@ -545,7 +593,7 @@ li:hover{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-height: 140dvh;
+  max-height: 130dvh;
   width: 100dvw;
   margin-top: 20px;
 
@@ -674,8 +722,10 @@ li:hover{
   padding: 2dvw 3.5dvh;
   font-size: 3dvw;
 }
-  
+ 
 }
+
+
 /*form css end*/
 
 footer {
@@ -683,7 +733,6 @@ footer {
   padding-top: 20px;
   padding-bottom: 50px;
   width: 100dvw;
-  position: relative;
   bottom: 0;
 }
 
@@ -691,7 +740,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px;
+  max-width:900px;
   margin: auto;
 }
 
@@ -715,8 +764,33 @@ footer {
 
 .social-media a img {
   width: 40px;
-  height: 40px;
+  height: 40px; 
 }
+@media (max-width: 480px) {
+  .footer-content .logo img {
+    width:100px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .footer-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .social-media a img {
+    width: 35px;
+    height: 35px; 
+    
+  }
+}
+
+/*footer CSS end*/
 
 .team-body {
     margin: 0;
@@ -958,4 +1032,114 @@ footer {
     height: auto;
     margin-top: 40px; 
   }
+}
+
+
+
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .navdiv {
+    flex-direction: column;
+  }
+  .logo img {
+    margin-left: 0;
+    margin-bottom: 20px;
+    flex-direction: flex-start;
+    width: 35dvw;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-logo{
+    align-self: flex-start;
+  }
+  .navl{
+    position: relative;
+     left: -150%;
+     display: none;
+     
+  } 
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .brochure-button {
+    margin-right: 0;
+    margin-top: 20px;
+    padding: 10px 10px;
+  }
+  .brochure-button:hover,
+.brochure-button:hover a {
+  transform: translateX(0%);
+}
+  .navdiv a {
+    font-size: 1.5rem;
+    padding-bottom: 7px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  
+
+  .hamb{
+    display: block;
+    cursor: pointer;
+  }
+  
+
+  .stage{
+    height: 65dvh;
+  }
+  .container-1{
+    height: 40dvh;
+  }
+  
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .navdiv {
+    flex-direction: column;
+  }
+  .navl{
+    position: relative;
+     left: -150%;
+     display: none;
+     transition: left 0.3s ease, display 0s 0.3s;
+  } 
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    margin-left: 0;
+    margin-bottom: 20px;
+    width: 40dvw;
+    flex-direction: flex-start;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .brochure-button {
+    margin-right: 0;
+    margin-top: 20px;
+    width: auto;
+    text-align: center;
+    
+  }
+  .navdiv a {
+    font-size: 1.3rem;
+    padding-bottom: 7px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+ 
 }

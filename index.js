@@ -40,3 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
       
 });
+
+document.querySelector('.hamb').addEventListener('click', function() {
+    const navLinks = document.querySelectorAll('.navl');
+    navLinks.forEach(navLink => {
+        if (navLink.style.left === '0%') {
+            navLink.style.left = '-100%';
+            setTimeout(() => {
+                navLink.style.display = 'none';
+            }, 300); // delay display none to match the transition duration
+        } else {
+            navLink.style.display = 'block';
+            setTimeout(() => {
+                navLink.style.left = '0%';
+            }, 10); // small delay to ensure display block before transition starts
+        }
+    });
+});
+
