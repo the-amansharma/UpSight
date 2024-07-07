@@ -123,9 +123,9 @@ body {
   border-radius: 5px;
 }
 
-.brochure-button:hover::before {
+/* .brochure-button:hover::before {
   transform: translateX(20%);
-}
+} */
 
 .brochure-button a {
   color: #ffffff;
@@ -136,7 +136,7 @@ body {
 
 .brochure-button:hover,
 .brochure-button:hover a {
-  transform: translateX(20%);
+  transform: translateX(10%);
 }
 
 .section-1 {
@@ -215,9 +215,7 @@ body {
   
 }
 
-a.download-brochure-button:hover{
-  transform: scale(1.05);
-}
+
 .download-brochure-button a {
   color: #fff;
   text-decoration: none;
