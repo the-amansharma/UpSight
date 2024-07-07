@@ -19,11 +19,13 @@ body {
 
 }
 .stage {
-  background-image: url(background/image_1.png);
+  
   width: 100dvw;
   height: 100dvh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-image: url(background/stage-light.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; */
 }
 
 .logo img {
@@ -87,7 +89,8 @@ body {
   margin-right: 25px;
 }
 .navdiv a:hover{
-  text-shadow: #FC0 1px 0 10px;
+  /* text-shadow: #FC0 1px 0 10px; */
+  text-shadow: rgb(0,255, 149) 2px 0 10px;
   transition: all 0.2s ease-in;
   transform: scale(1.1);
 }
@@ -147,7 +150,9 @@ body {
   margin-top: 30px;
   width: 100dvw;
   height: 100%;
-  background-image: url(/background/stage-light.png);
+  background-image: url(background/stage-light.png);
+  background-position: top;
+  background-size: cover;
 }
 .section-1 h1 {
   font-size: 8dvw;
@@ -314,6 +319,11 @@ a.download-brochure-button:hover{
   font-weight: bolder;
   flex: 1.5 1 65%;
   border-radius: 20px;
+}
+.sub-item1:hover{
+  transform: scale(1.1);
+  text-shadow: #FC0 1px 0 10px; 
+  transition: all 0.2s ease-in;
 }
 
 .sub-item2 {
@@ -1206,8 +1216,9 @@ footer {
   }
 
   .stage{
-    height: 45dvh;
+    height: 45dvh; 
   }
+
 
   .section-1 h1{
     margin-bottom: 10px;
@@ -1219,7 +1230,7 @@ footer {
     font-size: 15px;
   }
   .container-1{
-    height: 17vh;
+    height: 20dvh;
   }
   .overlay-image{
     height: 100%;

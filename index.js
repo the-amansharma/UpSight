@@ -58,3 +58,18 @@ document.querySelector('.hamb').addEventListener('click', function() {
     });
 });
 
+window.addEventListener("load", function() {
+    const form = document.getElementById('my-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action="https://script.google.com/macros/s/AKfycbyfi2SFQ5crP9HIOrk8UimpCJiZCW-vzfG-igqn7tK0Y2kffvAPCgNI082KDmkDnTA8/exec";
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Thank YOU!\n Our Team will Contact you Shortly.");
+      })
+    });
+  });
