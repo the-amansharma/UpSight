@@ -19,7 +19,7 @@ body {
 
 }
 .stage {
-  background-image: url(/background/image_1.png);
+  background-image: url(background/image_1.png);
   width: 100dvw;
   height: 100dvh;
   background-size: cover;
@@ -80,7 +80,7 @@ body {
 
 .navdiv a {
   color: #ffffff;
-  font-size: 1.5dvw;
+  font-size: 1.35dvw;
   padding-right: 25px;
   padding-left: 25px;
   margin-left: 25px;
@@ -176,49 +176,56 @@ body {
 
 .download-brochure-button {
   background: transparent;
-  border: 3px solid transparent;
-  padding: 15px 22px;
-  font-size: 1.1em;
-  text-wrap: wrap;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  border-radius: 25px;
-  transition: color 0.4s, border-color 0.4s;
-  border-image: linear-gradient(to right, #049AAC, #3BB688, #76D55E);
-  border-image-slice: 1;
+      border: none;
+      padding: 15px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      transition: color 0.4s;
+      z-index: 1;
+      text-wrap: wrap;
+  
 }
 
 .download-brochure-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  transition: transform 0.4s,all 0.2s ease-in-out;
-  z-index: -1;
-  border-radius: 5px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 25px;
+      padding: 3px; /* Match the border width */
+      background: linear-gradient(to right, #049AAC, #3BB688, #76D55E);
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude; /* Fix for border-radius */
+      z-index: -1;
+      transition: background 0.4s;
+  
+  
 }
 
-.download-brochure-button:hover::before {
-  transform: translateX(-50%);
+a.download-brochure-button:hover{
+  transform: scale(1.05);
 }
-
 .download-brochure-button a {
   color: #fff;
   text-decoration: none;
   transition: color 0.4s;
   font-family: "Inter";
+  font-size: 80%;
+  font-weight: bold;
+}
+.download-brochure-button:hover::before {
+  background: linear-gradient(to right,#76D55E,#3BB688, #049AAC);
+  
 }
 
-.download-brochure-button:hover,
-.download-brochure-button:hover a {
-  border-image: linear-gradient(to right,#76D55E,#3BB688, #049AAC);
-  border-image-slice: 1;
-  color: #ffffff;
-  transform: scale(1.1);
-}
 
 .container-1 {
   position: relative;
@@ -1212,7 +1219,10 @@ footer {
     font-size: 15px;
   }
   .container-1{
-    height: 15dvh;
+    height: 17vh;
+  }
+  .overlay-image{
+    height: 100%;
   }
   .service-heading{
     font-size: 45px;
@@ -1224,6 +1234,12 @@ footer {
   }
   .team-body{
     height: 60vh;
+  }
+  .download-brochure-button{
+    padding: 10px 10px;
+  }
+  .download-brochure-button a{
+    font-size: 0.55rem;
   }
  
 }
